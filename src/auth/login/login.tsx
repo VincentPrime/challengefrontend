@@ -28,8 +28,8 @@ export default function LoginForm() {
     email: "",
     password: "",
   });
-  const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [_error, setError] = useState("");
+  const [_isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -40,8 +40,7 @@ export default function LoginForm() {
       const response = await login(formData);
       
       if (response.success) {
-        // Redirect to dashboard or home page
-        navigate("/home"); // Change to your desired route
+        navigate("/home"); 
       } else {
         setError(response.message);
       }
@@ -61,7 +60,7 @@ export default function LoginForm() {
   };
   
   return (
-<div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-[#6a83de] to-[#3b425c]">
+<div className="flex items-center justify-center min-h-screen _bg-gradient-to-b from-[#6a83de] to-[#3b425c]">
     <div className="flex flex-col gap-6 xl:w-100 w-100">
       <Card>
         <CardHeader>

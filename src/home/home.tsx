@@ -5,7 +5,6 @@ import { Input } from '@/components/ui/input';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { MapPin, Search, Trash2, X, LogOut } from 'lucide-react';
 import api from "@/api/axios"
-// Mock API functions - replace with actual axios calls
 
 
 interface GeoData {
@@ -37,7 +36,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [history, setHistory] = useState<SearchHistory[]>([]);
   const [selectedHistory, setSelectedHistory] = useState<Set<number>>(new Set());
-  const [userIP, setUserIP] = useState('');
+  const [_userIP, setUserIP] = useState('');
 
   useEffect(() => {
     loadUserGeoData();

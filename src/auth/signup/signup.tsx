@@ -40,7 +40,6 @@ export function Signup() {
       confimpassword: '[REDACTED]'
     });
 
-    // Client-side validation
     if (formData.password !== formData.confimpassword) {
       setError("Passwords do not match");
       console.log('❌ Validation failed: Passwords do not match');
@@ -90,7 +89,7 @@ export function Signup() {
   };
 
   return (
-    <div className="flex items-center justify-center py-10 bg-gradient-to-b from-[#6a83de] to-[#3b425c]">
+    <div className="flex items-center justify-center py-10 _bg-gradient-to-b from-[#6a83de] to-[#3b425c]">
       <Card className="flex flex-col gap-6 w-100">
         <CardHeader>
           <CardTitle>Create an account</CardTitle>
@@ -101,7 +100,6 @@ export function Signup() {
         <CardContent>
           <form onSubmit={handleSubmit}>
             <FieldGroup>
-              {/* ✅ ERROR DISPLAY - THIS WAS MISSING! */}
               {error && (
                 <div className="p-3 mb-4 text-sm text-red-800 bg-red-100 border border-red-200 rounded">
                   {error}
